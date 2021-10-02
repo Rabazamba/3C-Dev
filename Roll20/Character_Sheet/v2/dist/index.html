@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3C - Character Sheet v2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container">
+
+  <form> 
+    
+    <div class="sheet_header">
+      <h1>3C - Characterbogen</h1>    
+      
+      <img src="https://github.com/Rabazamba/3C-Dev/raw/main/Graphics/3c_Logo_V05_Orange.png">
+      
+    </div>
+    
+    <br>
+    
+      <table class="table_header">
+        <tr>
+          <th>
+            <label>Name:</label>
+            <input type="text" name="attr_Name">
+          </th>
+          <th>
+            <label>Rasse:</label>
+            <input type="text" name="attr_Race">
+          </th>
+          <th>
+            <label>Beruf:</label>
+            <input type="text" name="attr_Job">
+          </th>
+          <th>
+            <label>Alter:</label>
+            <input type="text" name="attr_Age">
+          </th>
+          <th>
+            <label>Größe:</label>
+            <input type="text" name="attr_Height">
+          </th>
+          <th>
+            <label>Gewicht:</label>
+            <input type="text" name="attr_Weight">
+          </th>
+        </tr>
+      </table>
+      
+      <br>
+      
+      <table class="table2_col tb_advantages_disadvantages">
+        <tr>
+          <th>Vorteile</th>
+          <th>Nachteile</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was sind naturgegebene Vorteile des Helden?</td>
+          <td class="td_tooltip">Was sind naturgegebene Nachteile deines Helden?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_advantages1"></input>
+            <input type="text" class="textarea" name="attr_advantages2"></input>
+            <input type="text" class="textarea" name="attr_advantages3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_disadvantages1"></input>
+            <input type="text" class="textarea" name="attr_disadvantages2"></input>
+            <input type="text" class="textarea" name="attr_disadvantages3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_Skills_Inabilities">
+        <tr>
+          <th>Fähigkeiten</th>
+          <th>Unfähigkeiten</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Welche Fähigkeiten hat dein Held, die er besonders gut kann?</td>
+          <td class="td_tooltip">Was kann dein Held absolut nicht?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Skills1"></input>
+            <input type="text" class="textarea" name="attr_Skills2"></input>
+            <input type="text" class="textarea" name="attr_Skills3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Inability1"></textarea>
+            <input type="text" class="textarea" name="attr_Inability2"></textarea>
+            <input type="text" class="textarea" name="attr_Inability3"></textarea>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_Attack_Weakness">
+        <tr>
+          <th>Typische Angriffe</th>
+          <th>Schwächen im Kampf</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Welche Kampfmanöver benutzt dein Held am liebsten?</td>
+          <td class="td_tooltip">Was sind typische Schwächen von deinem Helden im Kampf?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Attack1"></input>
+            <input type="text" class="textarea" name="attr_Attack2"></input>
+            <input type="text" class="textarea" name="attr_Attack3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Weakness1"></input>
+            <input type="text" class="textarea" name="attr_Weakness2"></input>
+            <input type="text" class="textarea" name="attr_Weakness3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_Likings_Dislikings">
+        <tr>
+          <th>Was mag dein Held?</th>
+          <th>Was mag dein Held überhaupt nicht?</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was mag dein Held besonders gerne?</td>
+          <td class="td_tooltip">Was mag dein Held überhaupt nicht?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Likings1"></input>
+            <input type="text" class="textarea" name="attr_Likings2"></input>
+            <input type="text" class="textarea" name="attr_Likings3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Dislikings1"></input>
+            <input type="text" class="textarea" name="attr_Dislikings2"></input>
+            <input type="text" class="textarea" name="attr_Dislikings3"></input>
+          </td>
+        </tr>
+      </table>
+        
+      <br>
+       
+      <table class="table2_col tb_Goals_Characteristics">
+        <tr>
+          <th>Ziele</th>
+          <th>Charakteristiken</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was hat dein Held für Ziele?</td>
+          <td class="td_tooltip">Was macht deinen Helden aus?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Goals1"></input>
+            <input type="text" class="textarea" name="attr_Goals2"></input>
+            <input type="text" class="textarea" name="attr_Goals3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Characteristics1"></input>
+            <input type="text" class="textarea" name="attr_Characteristics2"></input>
+            <input type="text" class="textarea" name="attr_Characteristics3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_BucketList">
+        <tr>
+          <th>Lebensaufgabe</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was hat sich dein Held zur großen Lebensaufgabe gemacht?</td>
+        </tr>
+        <tr>
+          <td>
+            <textarea class="textarea" name="attr_BucketList"></textarea>
+          </td>
+        </tr>
+      </table>
+    
+     </form> 
+  
+</div>
+<!-- partial -->
+  
+</body>
+</html>
