@@ -1,0 +1,30 @@
+.table_header {
+  width: 100%;
+}
+.table_header tr {
+  border-bottom: 2px solid black;
+}
+.table_header input {
+  display: inline-block;
+  width: 64%;
+}
+
+
+.table2_col {
+  
+  text-justify: inter-word;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.table2_col th, .table2_col td{
+  width: 50%;
+}
+
+.textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  resize: none;
+}
+.td_tooltip{
+  font-size: 0.7em;
+}
