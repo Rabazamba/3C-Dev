@@ -1,0 +1,73 @@
+.container{
+  background-image: url("https://github.com/Rabazamba/3C-Dev/raw/main/Graphics/BG-Image.jpg");
+}
+
+
+/*Configure the tab buttons*/
+.charsheet .sheet-character,
+.charsheet .sheet-abilities_disabilities,
+.charsheet .sheet-inventory {
+    display: none;
+}
+
+/* show the selected tab */
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.charsheet .sheet-tabstoggle[value="abilities_disabilities"] ~ div.sheet-abilities_disabilities,
+.charsheet .sheet-tabstoggle[value="inventory"] ~ div.sheet-inventory {
+    display: block;
+}
+
+button[type=roll].three_c_button::before {
+  content: '' !important;
+}
+
+button[type=roll].three_c_button {
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  background-color: transparent !important;
+  outline: 0 !important;
+}
+
+.sheet_header{
+  text-align: center;
+}
+.sheet_header h1{
+  font-family: "Copperplate";
+  font-weight: bold;
+}
+.sheet_header img{
+  width: 25%;
+  height: auto;
+}
+
+.table_header {
+  width: 100%;
+}
+.table_header tr {
+  border-bottom: 2px solid black;
+}
+.table_header input {
+  display: inline-block;
+  width: 64%;
+}
+
+
+.table2_col {
+  
+  text-justify: inter-word;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.table2_col th, .table2_col td{
+  width: 50%;
+}
+
+.textarea {
+  width: 100%;
+  margin-bottom: 1px;
+  resize: none;
+}
+.td_tooltip{
+  font-size: 0.7em;
+}

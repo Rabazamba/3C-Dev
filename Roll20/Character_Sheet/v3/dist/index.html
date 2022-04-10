@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3C - Character Sheet v3</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="container">
+	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="character" />
+	<div>
+		<button type="action" name="act_character">Charakter</button>
+		<button type="action" name="act_abilities_disabilities">Fähigkeiten/Schwächen</button>
+		<button type="action" name="act_inventory">Inventar</button>
+	</div>
+	<br>
+	<div class="sheet-character"> 
+        <form name="Form_3C_Character_Sheet"> 
+    
+            <div class="sheet_header">
+                <h1>3C - Charakterbogen</h1>    
+      
+                <button class="three_c_button" type="roll" value="&{template:default} {{name=3C-Wurf}} {{3C-Würfel=[[d20]] | [[d20]] | [[d20]]}} {{Erfolg wenn= größer gleich [[?{Modifier|11}]]}} {{Bonus Wurf= [[1d20]]}} 
+                        " name="roll_3C_Dice">
+                    <img src="https://github.com/Rabazamba/3C-Dev/raw/main/Graphics/3c_Logo_V05_Orange.png">
+                </button>
+                
+            </div>
+    
+        <br>
+    
+      <table class="table_header">
+        <tr>
+          <th>
+            <label>Name:</label>
+            <input type="text" name="attr_Name">
+          </th>
+          <th>
+            <label>Rasse:</label>
+            <input type="text" name="attr_Race">
+          </th>
+          <th>
+            <label>Beruf:</label>
+            <input type="text" name="attr_Job">
+          </th>
+          <th>
+            <label>Alter:</label>
+            <input type="text" name="attr_Age">
+          </th>
+          <th>
+            <label>Größe:</label>
+            <input type="text" name="attr_Height">
+          </th>
+          <th>
+            <label>Gewicht:</label>
+            <input type="text" name="attr_Weight">
+          </th>
+        </tr>
+      </table>
+      
+      <br>
+      
+      <table class="table2_col tb_physical_mental_life">
+        <tr>
+          <th>Physisches Leben</th>
+          <th>Psychisches Leben</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was sind naturgegebene Vorteile des Helden?</td>
+          <td class="td_tooltip">Was sind naturgegebene Nachteile deines Helden?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_physical_life1"></input>
+            <input type="text" class="textarea" name="attr_physical_life2"></input>
+            <input type="text" class="textarea" name="attr_physical_life3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_mental_life1"></input>
+            <input type="text" class="textarea" name="attr_mental_life2"></input>
+            <input type="text" class="textarea" name="attr_mental_life3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+      
+      <table class="table2_col tb_advantages_disadvantages">
+        <tr>
+          <th>Vorteile</th>
+          <th>Nachteile</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was sind naturgegebene Vorteile des Helden?</td>
+          <td class="td_tooltip">Was sind naturgegebene Nachteile deines Helden?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_advantages1"></input>
+            <input type="text" class="textarea" name="attr_advantages2"></input>
+            <input type="text" class="textarea" name="attr_advantages3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_disadvantages1"></input>
+            <input type="text" class="textarea" name="attr_disadvantages2"></input>
+            <input type="text" class="textarea" name="attr_disadvantages3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_Likings_Dislikings">
+        <tr>
+          <th>Was mag dein Held?</th>
+          <th>Was mag dein Held überhaupt nicht?</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was mag dein Held besonders gerne?</td>
+          <td class="td_tooltip">Was mag dein Held überhaupt nicht?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Likings1"></input>
+            <input type="text" class="textarea" name="attr_Likings2"></input>
+            <input type="text" class="textarea" name="attr_Likings3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Dislikings1"></input>
+            <input type="text" class="textarea" name="attr_Dislikings2"></input>
+            <input type="text" class="textarea" name="attr_Dislikings3"></input>
+          </td>
+        </tr>
+      </table>
+        
+      <br>
+       
+      <table class="table2_col tb_Goals_Characteristics">
+        <tr>
+          <th>Ziele</th>
+          <th>Charakteristiken</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was hat dein Held für Ziele?</td>
+          <td class="td_tooltip">Was macht deinen Helden aus?</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="textarea" name="attr_Goals1"></input>
+            <input type="text" class="textarea" name="attr_Goals2"></input>
+            <input type="text" class="textarea" name="attr_Goals3"></input>
+          </td>
+          <td>
+            <input type="text" class="textarea" name="attr_Characteristics1"></input>
+            <input type="text" class="textarea" name="attr_Characteristics2"></input>
+            <input type="text" class="textarea" name="attr_Characteristics3"></input>
+          </td>
+        </tr>
+      </table>
+       
+      <br>
+       
+      <table class="table2_col tb_BucketList">
+        <tr>
+          <th>Lebensaufgabe</th>
+        </tr>
+        <tr>
+          <td class="td_tooltip">Was hat sich dein Held zur großen Lebensaufgabe gemacht?</td>
+        </tr>
+        <tr>
+          <td>
+            <textarea class="textarea" name="attr_BucketList"></textarea>
+          </td>
+        </tr>
+      </table>
+    
+     </form>   
+     </div>
+	<div class="sheet-abilities_disabilities"> 
+	    <form name="Form_abilities_disabilities_sheet">
+	        <div class="sheet_header">
+                <h1>3C - Fähigkeiten/Schwächen</h1>    
+      
+                <button class="three_c_button" type="roll" value="&{template:default} {{name=3C-Wurf}} {{3C-Würfel=[[d20]] | [[d20]] | [[d20]]}} {{Erfolg wenn= größer gleich [[?{Modifier|11}]]}} {{Bonus Wurf= [[1d20]]}} 
+                        " name="roll_3C_Dice">
+                    <img src="https://github.com/Rabazamba/3C-Dev/raw/main/Graphics/3c_Logo_V05_Orange.png">
+                </button>
+            </div>
+    
+        <br>
+        
+            
+        <table class="table2_col tb_Skills_Inabilities">
+            <tr>
+                <th>Fähigkeiten</th>
+                <th>Schwächen</th>
+            </tr>
+            <tr>
+                <td class="td_tooltip">Welche Fähigkeiten hat dein Held, die er besonders gut kann?</td>
+                <td class="td_tooltip">Was kann dein Held absolut nicht?</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="textarea" name="attr_Skills1"></input>
+                    <input type="text" class="textarea" name="attr_Skills2"></input>
+                    <input type="text" class="textarea" name="attr_Skills3"></input>
+                    <input type="text" class="textarea" name="attr_Skills4"></input>
+                    <input type="text" class="textarea" name="attr_Skills5"></input>
+                    <input type="text" class="textarea" name="attr_Skills6"></input>
+                    <input type="text" class="textarea" name="attr_Skills7"></input>
+                    <input type="text" class="textarea" name="attr_Skills8"></input>
+                    <input type="text" class="textarea" name="attr_Skills9"></input>
+                    <input type="text" class="textarea" name="attr_Skills10"></input>
+                    <input type="text" class="textarea" name="attr_Skills11"></input>
+                    <input type="text" class="textarea" name="attr_Skills12"></input>
+                    <input type="text" class="textarea" name="attr_Skills13"></input>
+                    <input type="text" class="textarea" name="attr_Skills14"></input>
+                    <input type="text" class="textarea" name="attr_Skills15"></input>
+                    <input type="text" class="textarea" name="attr_Skills16"></input>
+                    <input type="text" class="textarea" name="attr_Skills17"></input>
+                    <input type="text" class="textarea" name="attr_Skills18"></input>
+                    <input type="text" class="textarea" name="attr_Skills19"></input>
+                    <input type="text" class="textarea" name="attr_Skills20"></input>
+                    <input type="text" class="textarea" name="attr_Skills21"></input>
+                    <input type="text" class="textarea" name="attr_Skills22"></input>
+                    <input type="text" class="textarea" name="attr_Skills23"></input>
+                    <input type="text" class="textarea" name="attr_Skills24"></input>
+                    <input type="text" class="textarea" name="attr_Skills25"></input>
+                    <input type="text" class="textarea" name="attr_Skills26"></input>
+                    <input type="text" class="textarea" name="attr_Skills27"></input>
+                    <input type="text" class="textarea" name="attr_Skills28"></input>
+                    <input type="text" class="textarea" name="attr_Skills29"></input>
+                    <input type="text" class="textarea" name="attr_Skills30"></input>
+                </td>
+                <td>
+                    <input type="text" class="textarea" name="attr_Inability1"></input>
+                    <input type="text" class="textarea" name="attr_Inability2"></input>
+                    <input type="text" class="textarea" name="attr_Inability3"></input>
+                    <input type="text" class="textarea" name="attr_Inability4"></input>
+                    <input type="text" class="textarea" name="attr_Inability5"></input>
+                    <input type="text" class="textarea" name="attr_Inability6"></input>
+                    <input type="text" class="textarea" name="attr_Inability7"></input>
+                    <input type="text" class="textarea" name="attr_Inability8"></input>
+                    <input type="text" class="textarea" name="attr_Inability9"></input>
+                    <input type="text" class="textarea" name="attr_Inability10"></input>
+                    <input type="text" class="textarea" name="attr_Inability11"></input>
+                    <input type="text" class="textarea" name="attr_Inability12"></input>
+                    <input type="text" class="textarea" name="attr_Inability13"></input>
+                    <input type="text" class="textarea" name="attr_Inability14"></input>
+                    <input type="text" class="textarea" name="attr_Inability15"></input>
+                    <input type="text" class="textarea" name="attr_Inability16"></input>
+                    <input type="text" class="textarea" name="attr_Inability17"></input>
+                    <input type="text" class="textarea" name="attr_Inability18"></input>
+                    <input type="text" class="textarea" name="attr_Inability19"></input>
+                    <input type="text" class="textarea" name="attr_Inability20"></input>
+                    <input type="text" class="textarea" name="attr_Inability21"></input>
+                    <input type="text" class="textarea" name="attr_Inability22"></input>
+                    <input type="text" class="textarea" name="attr_Inability23"></input>
+                    <input type="text" class="textarea" name="attr_Inability24"></input>
+                    <input type="text" class="textarea" name="attr_Inability25"></input>
+                    <input type="text" class="textarea" name="attr_Inability26"></input>
+                    <input type="text" class="textarea" name="attr_Inability27"></input>
+                    <input type="text" class="textarea" name="attr_Inability28"></input>
+                    <input type="text" class="textarea" name="attr_Inability29"></input>
+                    <input type="text" class="textarea" name="attr_Inability30"></input>
+                </td>
+            </tr>
+        </table>
+            
+	    </form> 
+	</div>
+	<div class="sheet-inventory"> 
+	    <form>
+	        
+	        <div class="sheet_header">
+                <h1>3C - Inventar</h1>    
+      
+                <button class="three_c_button" type="roll" value="&{template:default} {{name=3C-Wurf}} {{3C-Würfel=[[d20]] | [[d20]] | [[d20]]}} {{Erfolg wenn= größer gleich [[?{Modifier|11}]]}} {{Bonus Wurf= [[1d20]]}} 
+                        " name="roll_3C_Dice">
+                    <img src="https://github.com/Rabazamba/3C-Dev/raw/main/Graphics/3c_Logo_V05_Orange.png">
+                </button>
+            </div>
+	        
+	        <table class="table2_col tb_Inventory">
+            
+            <tr>
+                <td>
+                    <input type="text" class="textarea" name="attr_InventoryL1"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL2"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL3"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL4"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL5"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL6"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL7"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL8"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL9"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL10"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL11"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL12"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL13"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL14"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL15"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL16"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL17"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL18"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL19"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL20"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL21"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL22"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL23"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL24"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL25"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL26"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL27"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL28"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL29"></input>
+                    <input type="text" class="textarea" name="attr_InventoryL30"></input>
+                </td>
+                <td>
+                    <input type="text" class="textarea" name="attr_InventoryR1"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR2"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR3"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR4"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR5"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR6"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR7"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR8"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR9"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR10"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR11"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR12"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR13"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR14"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR15"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR16"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR17"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR18"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR19"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR20"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR21"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR22"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR23"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR24"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR25"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR26"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR27"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR28"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR29"></input>
+                    <input type="text" class="textarea" name="attr_InventoryR30"></input>
+                </td>
+            </tr>
+        </table>
+	    </form> 
+	</div>
+	<script type="text/worker"> 
+	    const buttonlist = ["character","abilities_disabilities","inventory"]; 
+	    buttonlist.forEach(button => {
+	        on(`clicked:${button}`, function() {
+	            setAttrs({
+	                sheetTab: button 
+	            }); 
+	        });
+	    }); 
+    </script>
+</div>
+
+<rolltemplate class="sheet_rolltemplate_3CRollTemplate"> 
+
+</rolltemplate>
+<!-- partial -->
+  
+</body>
+</html>
